@@ -53,28 +53,27 @@ do $$
 	    grant connect on database postgres 
 	       to liquibase;
     	
-	   	grant usage on schema contas_pagar 
-	       to liquibase;
-	
-	 	grant usage, create on schema migrations 
+	 	grant usage, create on schema contas_pagar
 	       to liquibase;
 	
 	 	grant select, insert, update, delete on all tables 
-	       in schema migrations 
+	       in schema contas_pagar
 	       to liquibase;
 	
 	    --Defaults alterados para não necessitar conceder privilégios sempre que criar uma tabela/view
-		alter default privileges in schema migrations grant select, insert, update, delete 
+		alter default privileges in schema contas_pagar grant select, insert, update, delete
 	       on tables 
 	       to liquibase;
 	
 		grant usage on all sequences 
-	       in schema migrations 
+	       in schema contas_pagar
 	       to liquibase;
 	
 	    --Defaults alterados para não necessitar conceder privilégios sempre que criar sequences
 		alter default privileges 
-	       in schema migrations grant usage 
+	       in schema contas_pagar grant usage
 	       on sequences to liquibase;
+
+	    grant suser_mgm to liquibase;
 	end 
 $$;

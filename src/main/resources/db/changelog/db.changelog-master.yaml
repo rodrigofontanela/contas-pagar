@@ -3,5 +3,8 @@ databaseChangeLog:
 #      path: db/changelog/migrations/
 
   - include:
-      file: db/changelog/migrations/001-default-privileges-cp_system.sql
-
+      file:
+        - db/changelog/migrations/001-default-privileges-cp_system.sql
+  - include:
+      file:
+        - db/changelog/migrations/002-create-table-contas-pagar.sql
