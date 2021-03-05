@@ -1,0 +1,30 @@
+version: "3"
+services:
+    postgres:
+        image: postgres:13.0-alpine
+        container_name: postgres-contas-pagar
+        environment:
+            POSTGRES_USER: suser_mgm
+            POSTGRES_PASSWORD: suser_mgm
+            POSTGRES_DB: contas_pagar
+        ports:
+            - "5432:5432"
+
+    pgadmin:
+        image: dpage/pgadmin4
+        container_name: pgadmin4
+        environment:
+            PGADMIN_DEFAULT_EMAIL: rodrigofontanela@gmail.com
+            PGADMIN_DEFAULT_PASSWORD: suser_mgm
+        ports:
+            - "80:80"
+        links:
+            - "postgres:postgres"
+            
+#    cloudbeaver:
+#        image: dbeaver/cloudbeaver
+#        container_name: cloudbeaver
+#        ports:
+#            - "80:8978"
+#        links:
+#            - postgres:postgres

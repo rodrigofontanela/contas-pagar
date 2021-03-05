@@ -1,0 +1,7 @@
+databaseChangeLog:
+#  - includeAll:
+#      path: db/changelog/migrations/
+
+  - include:
+      file: db/changelog/migrations/001-default-privileges-cp_system.sql
+
