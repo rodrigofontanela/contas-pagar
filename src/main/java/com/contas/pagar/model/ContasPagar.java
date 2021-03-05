@@ -27,7 +27,7 @@ import static java.util.Objects.isNull;
 @Getter
 @Entity
 @Table(schema = Schemas.ContasPagar.NAME, name = Tables.ContasPagar.TABLE_NAME)
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = false)
 @SequenceGenerator(schema = Schemas.ContasPagar.NAME, name = Tables.ContasPagar.SEQUENCE_NAME, sequenceName = Tables.ContasPagar.SEQUENCE_NAME, allocationSize = 1)
 public class ContasPagar extends AbstractEntity<Long> {
 

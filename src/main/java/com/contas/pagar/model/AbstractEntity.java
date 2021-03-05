@@ -3,14 +3,15 @@ package com.contas.pagar.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Version;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
+@MappedSuperclass
+@Access(AccessType.FIELD)
 public abstract class AbstractEntity<I> implements IEntity<I> {
 
     @NotBlank
@@ -39,6 +40,5 @@ public abstract class AbstractEntity<I> implements IEntity<I> {
 
     public void onSave(final String userName) {
         this.createdBy = userName;
-        this.createdIn = LocalDateTime.now();
     }
 }
