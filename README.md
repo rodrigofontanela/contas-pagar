@@ -1,4 +1,4 @@
-## Projeto Contas a Pagar
+## Contas a Pagar
 
 ### Quick start
 
@@ -41,7 +41,7 @@ No client SQL, execute o arquivo:
  db\changelog\migrations\init.sql
 ```
 
-######O deploy da aplicação e o seu uso ainda está em construção. 
+###### O deploy da aplicação e o seu uso ainda está em construção. 
 
 
 
