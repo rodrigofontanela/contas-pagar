@@ -1,4 +1,4 @@
-## Projeto Contas a Pagar
+## Contas a Pagar
 
 ### Quick start
 
